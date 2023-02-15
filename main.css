@@ -11,6 +11,8 @@ a {
 }
 
 body {
+  display: flex;
+  flex-direction: row;
   font-family: "Roboto", sans-serif;
   background-color: #000000;
   width: 100vw;
@@ -21,10 +23,11 @@ body #sectionLeft {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  width: 24%;
+  width: 20%;
   height: 100%;
   background-color: rgb(61, 61, 61);
-  padding: 0 2%;
+  padding-left: 4%;
+  padding-right: 2%;
 }
 body #sectionLeft #divLogo {
   display: flex;
@@ -32,9 +35,14 @@ body #sectionLeft #divLogo {
   justify-content: start;
   align-items: center;
   width: 100%;
+  margin: 24% 0;
 }
 body #sectionLeft #divLogo object {
-  width: 20%;
+  width: 32%;
+}
+body #sectionLeft #divLogo span {
+  font-size: 32px;
+  font-weight: 600;
 }
 body #sectionLeft #divNavLog {
   display: flex;
@@ -49,7 +57,6 @@ body #sectionLeft #divNavLog #divNav {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: 80%;
   width: 100%;
 }
 body #sectionLeft #divNavLog #divNav button {
@@ -57,42 +64,178 @@ body #sectionLeft #divNavLog #divNav button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
   background-color: gray;
-  border-radius: 12px;
+  border-radius: 8px;
   gap: 10%;
-  padding: 4% 12%;
+  padding: 4%;
   cursor: pointer;
   border: none;
 }
 body #sectionLeft #divNavLog #divNav button object {
-  width: 20%;
+  width: 16%;
 }
 body #sectionLeft #divNavLog #divNav button span {
-  font-size: 16px;
+  font-size: 20px;
 }
 body #sectionLeft #divNavLog #divNav nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: 80%;
   width: 100%;
-  padding-left: 12%;
+  padding-left: 4%;
+  margin-top: 24%;
+  gap: 24px;
 }
 body #sectionLeft #divNavLog #divNav nav div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
 }
 body #sectionLeft #divNavLog #divNav nav div object {
-  width: 16%;
+  width: 20%;
 }
 body #sectionLeft #divNavLog #divNav nav div a {
+  font-size: 20px;
+  margin-left: 12px;
+}
+body #sectionLeft #divNavLog #LogOut {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  margin: 24% 0;
+}
+body #sectionLeft #divNavLog #LogOut object {
+  width: 20%;
+}
+body #sectionLeft #divNavLog #LogOut span {
+  margin-left: 20px;
+  font-size: 20px;
+}
+body #sectionMiddle {
+  width: 55%;
+  display: grid;
+  grid-template-rows: 12% 14% 56% 18%;
+  grid-template-columns: 100%;
+  background-color: #686868;
+}
+body #sectionMiddle #divMiddleTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 4%;
+}
+body #sectionMiddle #divMiddleTop span {
+  font-size: 28px;
+}
+body #sectionMiddle #divMiddleTop #divSearch {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 60%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 4px 2%;
+}
+body #sectionMiddle #divMiddleTop #divSearch object {
+  width: 8%;
+}
+body #sectionMiddle #divMiddleTop #divSearch input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 4%;
+}
+body #sectionMiddle #divMiddleInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+body #sectionMiddle #divMiddleInfo #divNavInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 48%;
+  background-color: #343434;
+  padding: 1% 2%;
+  border-radius: 8px;
+}
+body #sectionMiddle #divMiddleInfo #divNavInfo #infoSelect {
+  background-color: #181818;
+  border-radius: 8px;
+  padding: 2% 4%;
+}
+body #sectionMiddle #divMiddleInfo #divNavInfo span {
+  cursor: pointer;
+}
+body #sectionMiddle #divMiddleInfo #moulaStats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 30%;
+  height: 100%;
+  margin-left: 5%;
+}
+body #sectionMiddle #divMiddleInfo #moulaStats span:nth-child(1) {
+  font-size: 12px;
+  font-weight: 900;
+}
+body #sectionMiddle #divMiddleInfo #moulaStats span:nth-child(2) {
+  font-size: 20px;
+  font-weight: 400;
+}
+body #sectionMiddle #divMiddleInfo #moulaStats span:nth-child(2)::after {
+  content: "BTC";
+  font-size: 12px;
+  font-weight: 900;
+  margin-left: 8px;
+  background-color: yellow;
+  color: black;
+  border-radius: 4px;
+  padding: 2px;
+}
+body #sectionMiddle #divMiddleInfo #moulaStats span:nth-child(3) {
   font-size: 16px;
-  margin-left: 10px;
+}
+body #sectionMiddle #graphic {
+  background-color: #343434;
+  border-radius: 12px;
+  width: 90%;
+  height: 96%;
+  margin: 1% 5%;
+}
+body #sectionMiddle #transactionsRecent {
+  margin: 0 10%;
+}
+body #sectionMiddle #transactionsRecent #transactionsText {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+body #sectionMiddle #transactionsRecent #transactionsText span {
+  font-size: 16px;
+}
+body #sectionMiddle #transactionsRecent #transactionsText span:nth-child(1) {
+  color: white;
+  font-weight: 600;
+}
+body #sectionMiddle #transactionsRecent #transactionsText span:nth-child(2) {
+  color: #a0a0a0;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=main.css.map */
