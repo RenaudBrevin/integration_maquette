@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    width: 100vw;
+    height: 100vh;
+
+    #sectionLeft{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 24%;
+        height: 100%;
+        background-color: rgb(61, 61, 61);
+        padding: 0 2%;
+
+        #divLogo{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+
+            object{
+                width: 20%;
+            }
+        }
+
+        #divNavLog{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 80%;
+            width: 100%;
+
+            #divNav{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                height: 80%;
+                width: 100%;
+
+                button{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    background-color: gray;
+                    border-radius: 12px;
+                    gap: 10%;
+                    padding: 4% 12%;
+                    cursor: pointer;
+                    border: none;
+
+                    object{
+                        width: 20%;
+                    }
+
+                    span{
+                        font-size: 16px;
+                    }
+                }
+
+                nav{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    height: 80%;
+                    width: 100%;
+                    padding-left: 12%;
+
+                    div{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: 100%;
+
+                        object{
+                            width: 16%;
+                        }
+    
+                        a{
+                            font-size: 16px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
