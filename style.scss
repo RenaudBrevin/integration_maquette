@@ -15,24 +15,32 @@ a{
 
 
 body{
-    display: grid;
-    grid-template-columns: 20% 55% 25%;
+    display: flex;
+    flex-direction: row;
     font-family: 'Roboto', sans-serif;
     background-color: #000000;
-    height: 100vh;
+
+    @media screen and (max-width: $breakpoint-tablette){
+        display: flex;
+        flex-direction: column;
+    }
 
     #sectionLeft{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        width: 100%;
         height: 100%;
         // background-color: rgb(61, 61, 61);
         padding-left: 4%;
         padding-right: 2%;
+        width: 20%;
 
-        #divLogo{
+        @media screen and (max-width: $breakpoint-tablette){
+            display: none;
+        }
+
+        .divLogo{
             display: flex;
             flex-direction: row;
             justify-content: start;
@@ -137,8 +145,19 @@ body{
     // ###----### Section Middle ###----### //
 
     #sectionMiddle{
-        display: grid;
-        grid-template-rows: 12% 14% 56% 18%;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        width: 56%;
+
+        @media screen and (max-width: $breakpoint-tablette){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // align-items: center;
+            width: 100%;
+            height: 100%;
+        }
 
         #divMiddleTop{
             display: flex;
@@ -146,6 +165,11 @@ body{
             justify-content: space-between;
             align-items: center;
             padding: 0 4%;
+            height: 10vh;
+
+            @media screen and (max-width: $breakpoint-tablette){
+                display: none;
+            }
 
             span{
                 font-size: 28px;
@@ -180,6 +204,16 @@ body{
             display: flex;
             flex-direction: row;
             align-items: center;
+            width: 100%;
+            height: 12vh;
+
+            @media screen and (max-width: $breakpoint-tablette){
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: auto;
+                margin: 5%;
+                gap: 12%;
+            }
 
             #divNavInfo{
                 display: flex;
@@ -190,6 +224,11 @@ body{
                 background-color: #343434;
                 padding: 1% 2%;
                 border-radius: 8px;
+
+                @media screen and (max-width: $breakpoint-tablette){
+                    width: 100%;
+                    height: 100%;
+                }
 
                 #infoSelect{
                     background-color: #181818;
@@ -209,6 +248,12 @@ body{
                 align-items: flex-start;
                 width: 30%;
                 margin-left: 5%;
+
+                @media screen and (max-width: $breakpoint-tablette){
+                    width: 100%;
+                    height: 100%;
+                    margin-left: 0;
+                }
 
                 span:nth-child(1){
                     font-size: 12px;
@@ -241,6 +286,13 @@ body{
             background-color: #343434;
             border-radius: 12px;
             margin: 1% 5%;
+            height: 60vh;
+
+            @media screen and (max-width: $breakpoint-tablette){
+                width: 90%;
+                height: 24vh;
+                margin: 4% auto;
+            }
         }
 
         #transactionsRecent{
@@ -252,6 +304,10 @@ body{
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
+
+                @media screen and (max-width: $breakpoint-tablette){
+                    margin: 4% auto;
+                }
 
                 span{
                     font-size: 16px;
@@ -278,13 +334,35 @@ body{
 
                 background-color: #343434;
                 border-radius: 8px;
-                backdrop-filter: blur(10px);
+                // backdrop-filter: blur(10px);
                 
+
+                @media screen and (max-width: $breakpoint-tablette){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    gap: 8px;
+                    margin: 8px 20%;
+                }
+
+                div:nth-child(1), div:nth-child(6){
+                    @media screen and (max-width: $breakpoint-tablette){
+                        justify-content: center;
+                    }
+                }
+
                 div{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+
+                    @media screen and (max-width: $breakpoint-tablette){
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 80%;
+                    }
                     
                     .icon{
                         height: 100%;
@@ -316,18 +394,32 @@ body{
                     padding: 12% 18%;
                     cursor: pointer;
                     border: none;
+
+                    @media screen and (max-width: $breakpoint-tablette){
+                        width: auto;
+                        height: auto;
+                        padding: 4px;
+                    }
                 }
             }
         }
     }
 
-    // ###----### Section Left ###----### //
+    // ###----### Section Right ###----### //
 
     #sectionRight{
         display: grid;
         grid-template-rows: 10% 55% 35%;
-        width: 100%;
-        // background-color: #805454;
+        width: 24%;
+        
+        
+        @media screen and (max-width: 768px){
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
 
         #divTopRight{
             display: flex;
@@ -335,6 +427,10 @@ body{
             justify-content: space-between;
             align-items: center;
             width: 100%;
+
+            @media screen and (max-width: 768px){
+                display: none;
+            }
 
             object{
                 width: 12%;
@@ -350,6 +446,13 @@ body{
             width: 100%;
             gap: 4%;
 
+            
+            @media screen and (max-width: 768px){
+                gap: 16px;
+                width: 80%;
+                margin: auto;
+            }
+
             >span{
                 font-size: 12px;
                 margin-left: 4%;
@@ -364,12 +467,16 @@ body{
                 width: 100%;
                 height: 90%;
 
+                @media screen and (max-width: 768px){
+                    gap: 16px;
+                }
+
                 .elementTransactionsLeft{
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
-                    width: 95%;
+                    width: 92%;
 
                     object{
                         width: 14%;
@@ -416,6 +523,12 @@ body{
             width: 100%;
             gap: 6%;
 
+            @media screen and (max-width: 768px){
+                gap: 16px;
+                width: 80%;
+                margin: auto;
+            }
+
 
             >span{
                 font-size: 12px;
@@ -430,7 +543,7 @@ body{
                 align-items: flex-end;
                 width: 92%;
                 background: linear-gradient(115deg, #6411a8 0%, #6411a8 35%, #3067bb 65%, #3067bb 100%);
-                backdrop-filter: blur(10px);
+                // backdrop-filter: blur(10px);
                 border-radius: 12px;
                 margin: auto;
                 padding: 2% 4%;
@@ -459,6 +572,35 @@ body{
                     padding-right: 4px;
                 }
             }
+        }
+    }
+
+    // ###----### Section Responsive ###----### //
+
+    #responsiveSection{
+        display: none;
+
+        @media screen and (max-width: 768px){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            height: 100%;
+            margin: 4px auto;
+            margin-bottom: 24px;
+        }
+
+        .burger {
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px;
+            transition: all 0.3s ease;
         }
     }
 }

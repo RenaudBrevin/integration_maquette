@@ -11,23 +11,33 @@ a {
 }
 
 body {
-  display: grid;
-  grid-template-columns: 20% 55% 25%;
+  display: flex;
+  flex-direction: row;
   font-family: "Roboto", sans-serif;
   background-color: #000000;
-  height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
 }
 body #sectionLeft {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  width: 100%;
   height: 100%;
   padding-left: 4%;
   padding-right: 2%;
+  width: 20%;
 }
-body #sectionLeft #divLogo {
+@media screen and (max-width: 768px) {
+  body #sectionLeft {
+    display: none;
+  }
+}
+body #sectionLeft .divLogo {
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -35,10 +45,10 @@ body #sectionLeft #divLogo {
   width: 100%;
   margin: 24% 0;
 }
-body #sectionLeft #divLogo object {
+body #sectionLeft .divLogo object {
   width: 32%;
 }
-body #sectionLeft #divLogo span {
+body #sectionLeft .divLogo span {
   font-size: 32px;
   font-weight: 600;
 }
@@ -113,8 +123,19 @@ body #sectionLeft #divNavLog #LogOut span {
   font-size: 20px;
 }
 body #sectionMiddle {
-  display: grid;
-  grid-template-rows: 12% 14% 56% 18%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: 56%;
+}
+@media screen and (max-width: 768px) {
+  body #sectionMiddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
 }
 body #sectionMiddle #divMiddleTop {
   display: flex;
@@ -122,6 +143,12 @@ body #sectionMiddle #divMiddleTop {
   justify-content: space-between;
   align-items: center;
   padding: 0 4%;
+  height: 10vh;
+}
+@media screen and (max-width: 768px) {
+  body #sectionMiddle #divMiddleTop {
+    display: none;
+  }
 }
 body #sectionMiddle #divMiddleTop span {
   font-size: 28px;
@@ -151,6 +178,17 @@ body #sectionMiddle #divMiddleInfo {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
+  height: 12vh;
+}
+@media screen and (max-width: 768px) {
+  body #sectionMiddle #divMiddleInfo {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+    margin: 5%;
+    gap: 12%;
+  }
 }
 body #sectionMiddle #divMiddleInfo #divNavInfo {
   display: flex;
@@ -161,6 +199,12 @@ body #sectionMiddle #divMiddleInfo #divNavInfo {
   background-color: #343434;
   padding: 1% 2%;
   border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+  body #sectionMiddle #divMiddleInfo #divNavInfo {
+    width: 100%;
+    height: 100%;
+  }
 }
 body #sectionMiddle #divMiddleInfo #divNavInfo #infoSelect {
   background-color: #181818;
@@ -177,6 +221,13 @@ body #sectionMiddle #divMiddleInfo #moulaStats {
   align-items: flex-start;
   width: 30%;
   margin-left: 5%;
+}
+@media screen and (max-width: 768px) {
+  body #sectionMiddle #divMiddleInfo #moulaStats {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
 }
 body #sectionMiddle #divMiddleInfo #moulaStats span:nth-child(1) {
   font-size: 12px;
@@ -203,6 +254,14 @@ body #sectionMiddle #graphic {
   background-color: #343434;
   border-radius: 12px;
   margin: 1% 5%;
+  height: 60vh;
+}
+@media screen and (max-width: 768px) {
+  body #sectionMiddle #graphic {
+    width: 90%;
+    height: 24vh;
+    margin: 4% auto;
+  }
 }
 body #sectionMiddle #transactionsRecent {
   margin: 0 4%;
@@ -213,6 +272,11 @@ body #sectionMiddle #transactionsRecent #transactionsText {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  body #sectionMiddle #transactionsRecent #transactionsText {
+    margin: 4% auto;
+  }
 }
 body #sectionMiddle #transactionsRecent #transactionsText span {
   font-size: 16px;
@@ -234,13 +298,34 @@ body #sectionMiddle #transactionsRecent .transaction {
   margin-top: 8px;
   background-color: #343434;
   border-radius: 8px;
-  backdrop-filter: blur(10px);
+}
+@media screen and (max-width: 768px) {
+  body #sectionMiddle #transactionsRecent .transaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 20%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body #sectionMiddle #transactionsRecent .transaction div:nth-child(1), body #sectionMiddle #transactionsRecent .transaction div:nth-child(6) {
+    justify-content: center;
+  }
 }
 body #sectionMiddle #transactionsRecent .transaction div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  body #sectionMiddle #transactionsRecent .transaction div {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+  }
 }
 body #sectionMiddle #transactionsRecent .transaction div .icon {
   height: 100%;
@@ -268,10 +353,26 @@ body #sectionMiddle #transactionsRecent .transaction .tradeButton {
   cursor: pointer;
   border: none;
 }
+@media screen and (max-width: 768px) {
+  body #sectionMiddle #transactionsRecent .transaction .tradeButton {
+    width: auto;
+    height: auto;
+    padding: 4px;
+  }
+}
 body #sectionRight {
   display: grid;
   grid-template-rows: 10% 55% 35%;
-  width: 100%;
+  width: 24%;
+}
+@media screen and (max-width: 768px) {
+  body #sectionRight {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
 }
 body #sectionRight #divTopRight {
   display: flex;
@@ -279,6 +380,11 @@ body #sectionRight #divTopRight {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  body #sectionRight #divTopRight {
+    display: none;
+  }
 }
 body #sectionRight #divTopRight object {
   width: 12%;
@@ -291,6 +397,13 @@ body #sectionRight #divMiddleLeft {
   align-items: flex-start;
   width: 100%;
   gap: 4%;
+}
+@media screen and (max-width: 768px) {
+  body #sectionRight #divMiddleLeft {
+    gap: 16px;
+    width: 80%;
+    margin: auto;
+  }
 }
 body #sectionRight #divMiddleLeft > span {
   font-size: 12px;
@@ -305,12 +418,17 @@ body #sectionRight #divMiddleLeft > div {
   width: 100%;
   height: 90%;
 }
+@media screen and (max-width: 768px) {
+  body #sectionRight #divMiddleLeft > div {
+    gap: 16px;
+  }
+}
 body #sectionRight #divMiddleLeft > div .elementTransactionsLeft {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
+  width: 92%;
 }
 body #sectionRight #divMiddleLeft > div .elementTransactionsLeft object {
   width: 14%;
@@ -345,6 +463,13 @@ body #sectionRight #divBottomLeft {
   width: 100%;
   gap: 6%;
 }
+@media screen and (max-width: 768px) {
+  body #sectionRight #divBottomLeft {
+    gap: 16px;
+    width: 80%;
+    margin: auto;
+  }
+}
 body #sectionRight #divBottomLeft > span {
   font-size: 12px;
   margin-left: 4%;
@@ -357,7 +482,6 @@ body #sectionRight #divBottomLeft .elementAssets {
   align-items: flex-end;
   width: 92%;
   background: linear-gradient(115deg, #6411a8 0%, #6411a8 35%, #3067bb 65%, #3067bb 100%);
-  backdrop-filter: blur(10px);
   border-radius: 12px;
   margin: auto;
   padding: 2% 4%;
@@ -381,6 +505,31 @@ body #sectionRight #divBottomLeft .elementAssets div span:nth-child(2) {
 }
 body #sectionRight #divBottomLeft .elementAssets span {
   padding-right: 4px;
+}
+body #responsiveSection {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  body #responsiveSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin: 4px auto;
+    margin-bottom: 24px;
+  }
+}
+body #responsiveSection .burger {
+  cursor: pointer;
+}
+body #responsiveSection .burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
 
 /*# sourceMappingURL=main.css.map */
