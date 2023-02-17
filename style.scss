@@ -83,7 +83,7 @@ body{
                     background-repeat: no-repeat;
                     border-radius: 8px;
                     gap: 10%;
-                    padding: 4%;
+                    padding: 6% 10%;
                     cursor: pointer;
                     border: none;
 
@@ -201,7 +201,7 @@ body{
                     width: 80%;
                     height: 100%;
                     border: none;
-                    color: white;
+                    color: black;
                     font-size: 20px;
                     margin-left: 4%;
                 }
@@ -428,12 +428,22 @@ body{
 
                     span:nth-child(1), .moneyName{
                         font-size: 10px;
-                        color: #d6d6d6;
+                        color: #a0a0a0;
                     }
 
                     span:nth-child(2):not(.moneyName){
                         font-size: 12px;
                         color: rgb(76, 67, 197);
+                    }
+
+                    @media screen and (max-width: $breakpoint-tablette){
+                        span:nth-child(1), .moneyName{
+                            font-size: 12px;
+                        }
+
+                        span:nth-child(2):not(.moneyName){
+                            font-size: 14px;
+                        }
                     }
                 }
 
@@ -511,7 +521,7 @@ body{
             }
 
             >span{
-                font-size: 12px;
+                font-size: 16px;
                 margin-left: 4%;
                 font-weight: 600;
             }
@@ -577,8 +587,6 @@ body{
             flex-direction: column;
             justify-content: space-evenly;
             align-items: flex-start;
-            width: 100%;
-            gap: 6%;
 
             @media screen and (max-width: $breakpoint-tablette){
                 gap: 16px;
@@ -588,7 +596,7 @@ body{
 
 
             >span{
-                font-size: 12px;
+                font-size: 16px;
                 margin-left: 4%;
                 font-weight: 600;
             }
@@ -602,7 +610,7 @@ body{
                 // backdrop-filter: blur(10px);
                 border-radius: 12px;
                 margin: auto;
-                padding: 2% 4%;
+                padding: 6%;
 
                 div{
                     display: flex;
