@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   color: white;
-  border: red 1px solid !important;
 }
 
 a {
@@ -16,7 +15,6 @@ body {
   grid-template-columns: 20% 55% 25%;
   font-family: "Roboto", sans-serif;
   background-color: #000000;
-  width: 100vw;
   height: 100vh;
 }
 body #sectionLeft {
@@ -26,7 +24,6 @@ body #sectionLeft {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  background-color: rgb(61, 61, 61);
   padding-left: 4%;
   padding-right: 2%;
 }
@@ -116,19 +113,14 @@ body #sectionLeft #divNavLog #LogOut span {
   font-size: 20px;
 }
 body #sectionMiddle {
-  width: 100%;
   display: grid;
   grid-template-rows: 12% 14% 56% 18%;
-  grid-template-columns: 100%;
-  background-color: #686868;
 }
 body #sectionMiddle #divMiddleTop {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 100%;
   padding: 0 4%;
 }
 body #sectionMiddle #divMiddleTop span {
@@ -159,8 +151,6 @@ body #sectionMiddle #divMiddleInfo {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
-  height: 100%;
 }
 body #sectionMiddle #divMiddleInfo #divNavInfo {
   display: flex;
@@ -186,7 +176,6 @@ body #sectionMiddle #divMiddleInfo #moulaStats {
   justify-content: space-evenly;
   align-items: flex-start;
   width: 30%;
-  height: 100%;
   margin-left: 5%;
 }
 body #sectionMiddle #divMiddleInfo #moulaStats span:nth-child(1) {
@@ -213,14 +202,10 @@ body #sectionMiddle #divMiddleInfo #moulaStats span:nth-child(3) {
 body #sectionMiddle #graphic {
   background-color: #343434;
   border-radius: 12px;
-  width: 90%;
-  height: 96%;
   margin: 1% 5%;
 }
 body #sectionMiddle #transactionsRecent {
   margin: 0 4%;
-  height: 100%;
-  width: 92%;
 }
 body #sectionMiddle #transactionsRecent #transactionsText {
   display: flex;
@@ -245,8 +230,6 @@ body #sectionMiddle #transactionsRecent .transaction {
   grid-template-columns: 8% 12% 20% 20% 24% 10%;
   grid-template-rows: 100%;
   gap: 1%;
-  width: 100%;
-  height: 42%;
   padding: 4px 3%;
   margin-top: 8px;
   background-color: #343434;
@@ -261,6 +244,7 @@ body #sectionMiddle #transactionsRecent .transaction div {
 }
 body #sectionMiddle #transactionsRecent .transaction div .icon {
   height: 100%;
+  width: auto;
 }
 body #sectionMiddle #transactionsRecent .transaction div object {
   width: 100%;
@@ -288,7 +272,6 @@ body #sectionRight {
   display: grid;
   grid-template-rows: 10% 55% 35%;
   width: 100%;
-  background-color: #805454;
 }
 body #sectionRight #divTopRight {
   display: flex;
@@ -307,7 +290,6 @@ body #sectionRight #divMiddleLeft {
   justify-content: space-evenly;
   align-items: flex-start;
   width: 100%;
-  height: 100%;
   gap: 4%;
 }
 body #sectionRight #divMiddleLeft > span {
@@ -329,7 +311,6 @@ body #sectionRight #divMiddleLeft > div .elementTransactionsLeft {
   justify-content: space-between;
   align-items: center;
   width: 95%;
-  height: 100%;
 }
 body #sectionRight #divMiddleLeft > div .elementTransactionsLeft object {
   width: 14%;
@@ -355,6 +336,51 @@ body #sectionRight #divMiddleLeft > div .elementTransactionsLeft div:nth-child(3
   font-size: 12px;
   font-weight: 600;
   color: #0c530a;
+}
+body #sectionRight #divBottomLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  gap: 6%;
+}
+body #sectionRight #divBottomLeft > span {
+  font-size: 12px;
+  margin-left: 4%;
+  font-weight: 600;
+}
+body #sectionRight #divBottomLeft .elementAssets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 92%;
+  background: linear-gradient(115deg, #6411a8 0%, #6411a8 35%, #3067bb 65%, #3067bb 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin: auto;
+  padding: 2% 4%;
+}
+body #sectionRight #divBottomLeft .elementAssets div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 6px;
+}
+body #sectionRight #divBottomLeft .elementAssets div span:nth-child(1) {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+body #sectionRight #divBottomLeft .elementAssets div span:nth-child(2) {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+}
+body #sectionRight #divBottomLeft .elementAssets span {
+  padding-right: 4px;
 }
 
 /*# sourceMappingURL=main.css.map */
