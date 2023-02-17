@@ -15,6 +15,7 @@ body {
   flex-direction: row;
   font-family: "Roboto", sans-serif;
   background-color: #000000;
+  margin-bottom: 4vh;
 }
 @media screen and (max-width: 768px) {
   body {
@@ -27,12 +28,11 @@ body #sectionLeft {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  height: 100%;
   padding-left: 4%;
   padding-right: 2%;
   width: 20%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   body #sectionLeft {
     display: none;
   }
@@ -72,7 +72,9 @@ body #sectionLeft #divNavLog #divNav button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: gray;
+  background-image: url("Media/BackgroundButton.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 8px;
   gap: 10%;
   padding: 4%;
@@ -83,7 +85,8 @@ body #sectionLeft #divNavLog #divNav button object {
   width: 16%;
 }
 body #sectionLeft #divNavLog #divNav button span {
-  font-size: 20px;
+  color: black;
+  font-size: 18px;
 }
 body #sectionLeft #divNavLog #divNav nav {
   display: flex;
@@ -113,7 +116,6 @@ body #sectionLeft #divNavLog #LogOut {
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  margin: 24% 0;
 }
 body #sectionLeft #divNavLog #LogOut object {
   width: 20%;
@@ -127,6 +129,12 @@ body #sectionMiddle {
   flex-direction: column;
   gap: 2vh;
   width: 56%;
+}
+@media screen and (max-width: 1024px) {
+  body #sectionMiddle {
+    width: 65%;
+    gap: 4vh;
+  }
 }
 @media screen and (max-width: 768px) {
   body #sectionMiddle {
@@ -188,6 +196,7 @@ body #sectionMiddle #divMiddleInfo {
     height: auto;
     margin: 5%;
     gap: 12%;
+    width: auto;
   }
 }
 body #sectionMiddle #divMiddleInfo #divNavInfo {
@@ -202,8 +211,9 @@ body #sectionMiddle #divMiddleInfo #divNavInfo {
 }
 @media screen and (max-width: 768px) {
   body #sectionMiddle #divMiddleInfo #divNavInfo {
-    width: 100%;
+    width: 86%;
     height: 100%;
+    margin: auto;
   }
 }
 body #sectionMiddle #divMiddleInfo #divNavInfo #infoSelect {
@@ -251,17 +261,55 @@ body #sectionMiddle #divMiddleInfo #moulaStats span:nth-child(3) {
   font-size: 16px;
 }
 body #sectionMiddle #graphic {
+  position: relative;
   background-color: #343434;
   border-radius: 12px;
   margin: 1% 5%;
-  height: 60vh;
+  height: 40vw;
 }
 @media screen and (max-width: 768px) {
   body #sectionMiddle #graphic {
     width: 90%;
-    height: 24vh;
+    height: 64vw;
     margin: 4% auto;
   }
+}
+@media screen and (max-width: 320px) {
+  body #sectionMiddle #graphic {
+    height: 96vw;
+  }
+}
+body #sectionMiddle #graphic canvas {
+  position: absolute;
+  bottom: 12%;
+  left: 5%;
+  width: 90% !important;
+}
+body #sectionMiddle #graphic > div div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  padding: 0 4%;
+  margin-top: 4%;
+}
+@media screen and (max-width: 768px) {
+  body #sectionMiddle #graphic > div div {
+    margin-top: 8%;
+    width: 60%;
+  }
+}
+body #sectionMiddle #graphic > div div span {
+  background-color: #000000;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+body #sectionMiddle #graphic > div div span:nth-child(2) {
+  color: #000000;
+  background-color: #ffffff;
+  font-weight: 600;
 }
 body #sectionMiddle #transactionsRecent {
   margin: 0 4%;
@@ -365,6 +413,12 @@ body #sectionRight {
   grid-template-rows: 10% 55% 35%;
   width: 24%;
 }
+@media screen and (max-width: 1024px) {
+  body #sectionRight {
+    width: 35%;
+    grid-template-rows: 20% 40% 40%;
+  }
+}
 @media screen and (max-width: 768px) {
   body #sectionRight {
     width: auto;
@@ -416,7 +470,7 @@ body #sectionRight #divMiddleLeft > div {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 90%;
+  height: 86%;
 }
 @media screen and (max-width: 768px) {
   body #sectionRight #divMiddleLeft > div {
@@ -481,7 +535,6 @@ body #sectionRight #divBottomLeft .elementAssets {
   justify-content: space-between;
   align-items: flex-end;
   width: 92%;
-  background: linear-gradient(115deg, #6411a8 0%, #6411a8 35%, #3067bb 65%, #3067bb 100%);
   border-radius: 12px;
   margin: auto;
   padding: 2% 4%;
@@ -496,15 +549,25 @@ body #sectionRight #divBottomLeft .elementAssets div {
 body #sectionRight #divBottomLeft .elementAssets div span:nth-child(1) {
   font-size: 12px;
   font-weight: 600;
-  color: #ffffff;
 }
 body #sectionRight #divBottomLeft .elementAssets div span:nth-child(2) {
   font-size: 12px;
   font-weight: 400;
-  color: #ffffff;
 }
 body #sectionRight #divBottomLeft .elementAssets span {
   padding-right: 4px;
+}
+body #sectionRight #divBottomLeft .elementAssets:nth-child(2) {
+  background: linear-gradient(115deg, rgba(204, 0, 255, 0.74) 0%, rgba(204, 0, 255, 0.74) 35%, #1970D6 65%, #1970D6 100%);
+}
+body #sectionRight #divBottomLeft .elementAssets:nth-child(2) span {
+  color: #ffffff;
+}
+body #sectionRight #divBottomLeft .elementAssets:nth-child(3) {
+  background: linear-gradient(105deg, #FAFF00 0%, #FAFF00 40%, #4e96c0 75%, #c6c9ce 100%);
+}
+body #sectionRight #divBottomLeft .elementAssets:nth-child(3) span {
+  color: #000000;
 }
 body #responsiveSection {
   display: none;

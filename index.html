@@ -86,7 +86,17 @@
             </div>
         </div>
         <div id="graphic">
-
+            <div>
+                <div>
+                    <span>1H</span>
+                    <span>1D</span>
+                    <span>3D</span>
+                    <span>1W</span>
+                    <span>1M</span>
+                </div>
+                
+            </div>
+            <canvas id="graph"></canvas>
         </div>
         <div id="transactionsRecent">
             <div id="transactionsText">
@@ -151,7 +161,29 @@
             <span>Recent Transactions</span>
             <div>
                 <div class="elementTransactionsLeft">
-                    <object data="media/Bitcoin.svg"></object>
+                    <object data="media/Coin.svg"></object>
+                    <div>
+                        <span>Bitcoin</span>
+                        <span>Recieved</span>
+                    </div>
+                    <div>
+                        <span>+$3,546</span>
+                        <span>Today, 13:45 pm</span>
+                    </div>
+                </div>
+                <div class="elementTransactionsLeft">
+                    <object data="media/LCoin.svg"></object>
+                    <div>
+                        <span>Bitcoin</span>
+                        <span>Recieved</span>
+                    </div>
+                    <div>
+                        <span>+$3,546</span>
+                        <span>Today, 13:45 pm</span>
+                    </div>
+                </div>
+                <div class="elementTransactionsLeft">
+                    <object data="media/Binance.svg"></object>
                     <div>
                         <span>Bitcoin</span>
                         <span>Recieved</span>
@@ -173,29 +205,7 @@
                     </div>
                 </div>
                 <div class="elementTransactionsLeft">
-                    <object data="media/Bitcoin.svg"></object>
-                    <div>
-                        <span>Bitcoin</span>
-                        <span>Recieved</span>
-                    </div>
-                    <div>
-                        <span>+$3,546</span>
-                        <span>Today, 13:45 pm</span>
-                    </div>
-                </div>
-                <div class="elementTransactionsLeft">
-                    <object data="media/Bitcoin.svg"></object>
-                    <div>
-                        <span>Bitcoin</span>
-                        <span>Recieved</span>
-                    </div>
-                    <div>
-                        <span>+$3,546</span>
-                        <span>Today, 13:45 pm</span>
-                    </div>
-                </div>
-                <div class="elementTransactionsLeft">
-                    <object data="media/Bitcoin.svg"></object>
+                    <object data="media/Etherium.svg"></object>
                     <div>
                         <span>Bitcoin</span>
                         <span>Recieved</span>
@@ -219,13 +229,15 @@
             </div>
             <div class="elementAssets">
                 <div>
-                    <object data="media/Bitcoin.svg"></object>
-                    <span>Bitcoin</span>
-                    <span>183,163.39</span>
+                    <object data="media/Etherium.svg"></object>
+                    <span>Etherum</span>
+                    <span>280,963.52</span>
                 </div>
                 <span>BTC</span>
             </div>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="graph.js"></script>
 </body>
 </html>
